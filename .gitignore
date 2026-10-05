@@ -1,0 +1,29 @@
+# Credentials / secrets
+client_secret.json
+token.json
+
+# Personal configuration (copy config.example.yaml to config.yaml)
+config.yaml
+
+# State
+used_posts.json
+
+# Session logs
+reddit_session
+
+# Python
+__pycache__/
+*.pyc
+
+# Output artifacts
+output/
+uploaded/
+
+# Background videos (downloaded at runtime)
+backgrounds/
+
+# Media
+*.mp4
+*.mp3
+*.part
+*.png

@@ -1,0 +1,77 @@
+# RedditBot configuration template.
+# Copy this file to config.yaml and adjust the values.
+
+subreddits:
+  - AskReddit
+  - AmItheAsshole
+  - NoStupidQuestions
+  - tifu
+  - PettyRevenge
+  - MaliciousCompliance
+
+tts:
+  voice: "en-US-GuyNeural"
+  rate: "+8%"
+  volume: "+0%"
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  background_folder: "backgrounds"
+  reddit_card:
+    enabled: true
+    height: 800
+    bg_color: "#1A1A1B"
+    header_color: "#FF4500"
+    font_name: "Arial"
+    title_font_size: 38
+    comment_font_size: 26
+    max_comments: 3
+  subtitle:
+    enabled: false
+    font_name: "Arial"
+    font_size: 52
+    font_color: "&H00FFFFFF"
+    outline_color: "&H00000000"
+    outline_width: 4
+    max_chars_per_line: 40
+    max_lines: 2
+    margin_v: 830
+    alignment: 8
+
+youtube:
+  # Path to the OAuth client secret JSON downloaded from Google Cloud Console.
+  # Application type must be "Desktop app".
+  client_secret: "client_secret.json"
+  tags:
+    - "reddit"
+    - "askreddit"
+    - "shorts"
+    - "storytime"
+    - "reddit stories"
+  category_id: "24"
+  privacy_status: "public"
+  description_template: |
+    {title}
+
+    From Reddit: {reddit_url}
+
+    #reddit #shorts #storytime
+
+reddit:
+  user_agent: "RedditBot/1.0"
+  min_score: 0
+  min_length: 40
+  max_length: 2500
+  fetch_count: 10
+  comment_count: 15
+  target_duration_sec: 60
+  wait_before_comments_sec: 60
+  # Card/audio sync compensation (seconds). Increase if cards switch too early.
+  timing_offset_sec: 0.2
+
+output:
+  folder: "output"
+  uploaded_folder: "uploaded"
+  used_posts_file: "used_posts.json"
